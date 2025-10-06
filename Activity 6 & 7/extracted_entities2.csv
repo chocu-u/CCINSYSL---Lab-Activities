@@ -1,0 +1,134 @@
+message_id,message,entity_text,entity_label,description
+2,Connection to www.suspicious-site-1.com on port 8080,8080,CARDINAL,Numerals that do not fall under another type
+4,Connection to www.suspicious-site-2.com on port 8080,8080,CARDINAL,Numerals that do not fall under another type
+5,Email sent from Jane Doe to John Doe about Project X and the London office.,Email,PERSON,"People, including fictional"
+5,Email sent from Jane Doe to John Doe about Project X and the London office.,Jane Doe,PERSON,"People, including fictional"
+5,Email sent from Jane Doe to John Doe about Project X and the London office.,John Doe,PERSON,"People, including fictional"
+5,Email sent from Jane Doe to John Doe about Project X and the London office.,Project X,ORG,"Companies, agencies, institutions, etc."
+5,Email sent from Jane Doe to John Doe about Project X and the London office.,London,GPE,"Countries, cities, states"
+6,Email sent from Jane Doe to John Doe about Project X and the London office.,Email,PERSON,"People, including fictional"
+6,Email sent from Jane Doe to John Doe about Project X and the London office.,Jane Doe,PERSON,"People, including fictional"
+6,Email sent from Jane Doe to John Doe about Project X and the London office.,John Doe,PERSON,"People, including fictional"
+6,Email sent from Jane Doe to John Doe about Project X and the London office.,Project X,ORG,"Companies, agencies, institutions, etc."
+6,Email sent from Jane Doe to John Doe about Project X and the London office.,London,GPE,"Countries, cities, states"
+7,Connection to www.suspicious-site-4.com on port 8080,8080,CARDINAL,Numerals that do not fall under another type
+8,Connection to www.suspicious-site-5.com on port 8080,8080,CARDINAL,Numerals that do not fall under another type
+10,User logged in from IP 192.168.1.123,IP 192.168.1.123,ORG,"Companies, agencies, institutions, etc."
+13,User logged in from IP 192.168.1.71,192.168.1.71,CARDINAL,Numerals that do not fall under another type
+14,User logged in from IP 192.168.1.87,IP 192.168.1.87,ORG,"Companies, agencies, institutions, etc."
+15,Email sent from Jane Doe to John Doe about Project X and the London office.,Email,PERSON,"People, including fictional"
+15,Email sent from Jane Doe to John Doe about Project X and the London office.,Jane Doe,PERSON,"People, including fictional"
+15,Email sent from Jane Doe to John Doe about Project X and the London office.,John Doe,PERSON,"People, including fictional"
+15,Email sent from Jane Doe to John Doe about Project X and the London office.,Project X,ORG,"Companies, agencies, institutions, etc."
+15,Email sent from Jane Doe to John Doe about Project X and the London office.,London,GPE,"Countries, cities, states"
+17,Email sent from Jane Doe to John Doe about Project X and the London office.,Email,PERSON,"People, including fictional"
+17,Email sent from Jane Doe to John Doe about Project X and the London office.,Jane Doe,PERSON,"People, including fictional"
+17,Email sent from Jane Doe to John Doe about Project X and the London office.,John Doe,PERSON,"People, including fictional"
+17,Email sent from Jane Doe to John Doe about Project X and the London office.,Project X,ORG,"Companies, agencies, institutions, etc."
+17,Email sent from Jane Doe to John Doe about Project X and the London office.,London,GPE,"Countries, cities, states"
+18,Connection to www.suspicious-site-1.com on port 8080,8080,CARDINAL,Numerals that do not fall under another type
+19,User logged in from IP 192.168.1.147,IP 192.168.1.147,ORG,"Companies, agencies, institutions, etc."
+21,Email sent from Jane Doe to John Doe about Project X and the London office.,Email,PERSON,"People, including fictional"
+21,Email sent from Jane Doe to John Doe about Project X and the London office.,Jane Doe,PERSON,"People, including fictional"
+21,Email sent from Jane Doe to John Doe about Project X and the London office.,John Doe,PERSON,"People, including fictional"
+21,Email sent from Jane Doe to John Doe about Project X and the London office.,Project X,ORG,"Companies, agencies, institutions, etc."
+21,Email sent from Jane Doe to John Doe about Project X and the London office.,London,GPE,"Countries, cities, states"
+22,Connection to www.suspicious-site-5.com on port 8080,8080,CARDINAL,Numerals that do not fall under another type
+25,User logged in from IP 192.168.1.70,192.168.1.70,CARDINAL,Numerals that do not fall under another type
+27,User logged in from IP 192.168.1.207,IP,ORG,"Companies, agencies, institutions, etc."
+28,User logged in from IP 192.168.1.224,IP,ORG,"Companies, agencies, institutions, etc."
+28,User logged in from IP 192.168.1.224,192.168.1.224,CARDINAL,Numerals that do not fall under another type
+34,Email sent from Jane Doe to John Doe about Project X and the London office.,Email,PERSON,"People, including fictional"
+34,Email sent from Jane Doe to John Doe about Project X and the London office.,Jane Doe,PERSON,"People, including fictional"
+34,Email sent from Jane Doe to John Doe about Project X and the London office.,John Doe,PERSON,"People, including fictional"
+34,Email sent from Jane Doe to John Doe about Project X and the London office.,Project X,ORG,"Companies, agencies, institutions, etc."
+34,Email sent from Jane Doe to John Doe about Project X and the London office.,London,GPE,"Countries, cities, states"
+35,Email sent from Jane Doe to John Doe about Project X and the London office.,Email,PERSON,"People, including fictional"
+35,Email sent from Jane Doe to John Doe about Project X and the London office.,Jane Doe,PERSON,"People, including fictional"
+35,Email sent from Jane Doe to John Doe about Project X and the London office.,John Doe,PERSON,"People, including fictional"
+35,Email sent from Jane Doe to John Doe about Project X and the London office.,Project X,ORG,"Companies, agencies, institutions, etc."
+35,Email sent from Jane Doe to John Doe about Project X and the London office.,London,GPE,"Countries, cities, states"
+36,User logged in from IP 192.168.1.199,IP 192.168.1.199,ORG,"Companies, agencies, institutions, etc."
+37,User logged in from IP 192.168.1.218,IP,ORG,"Companies, agencies, institutions, etc."
+38,User logged in from IP 192.168.1.24,IP,ORG,"Companies, agencies, institutions, etc."
+38,User logged in from IP 192.168.1.24,192.168.1.24,CARDINAL,Numerals that do not fall under another type
+39,Email sent from Jane Doe to John Doe about Project X and the London office.,Email,PERSON,"People, including fictional"
+39,Email sent from Jane Doe to John Doe about Project X and the London office.,Jane Doe,PERSON,"People, including fictional"
+39,Email sent from Jane Doe to John Doe about Project X and the London office.,John Doe,PERSON,"People, including fictional"
+39,Email sent from Jane Doe to John Doe about Project X and the London office.,Project X,ORG,"Companies, agencies, institutions, etc."
+39,Email sent from Jane Doe to John Doe about Project X and the London office.,London,GPE,"Countries, cities, states"
+40,Connection to www.suspicious-site-4.com on port 8080,8080,CARDINAL,Numerals that do not fall under another type
+41,User logged in from IP 192.168.1.228,IP,ORG,"Companies, agencies, institutions, etc."
+41,User logged in from IP 192.168.1.228,192.168.1.228,CARDINAL,Numerals that do not fall under another type
+44,Connection to www.suspicious-site-2.com on port 8080,8080,CARDINAL,Numerals that do not fall under another type
+46,Connection to www.suspicious-site-2.com on port 8080,8080,CARDINAL,Numerals that do not fall under another type
+49,User logged in from IP 192.168.1.97,IP 192.168.1.97,ORG,"Companies, agencies, institutions, etc."
+51,Connection to www.suspicious-site-1.com on port 8080,8080,CARDINAL,Numerals that do not fall under another type
+54,Connection to www.suspicious-site-5.com on port 8080,8080,CARDINAL,Numerals that do not fall under another type
+55,Email sent from Jane Doe to John Doe about Project X and the London office.,Email,PERSON,"People, including fictional"
+55,Email sent from Jane Doe to John Doe about Project X and the London office.,Jane Doe,PERSON,"People, including fictional"
+55,Email sent from Jane Doe to John Doe about Project X and the London office.,John Doe,PERSON,"People, including fictional"
+55,Email sent from Jane Doe to John Doe about Project X and the London office.,Project X,ORG,"Companies, agencies, institutions, etc."
+55,Email sent from Jane Doe to John Doe about Project X and the London office.,London,GPE,"Countries, cities, states"
+58,User logged in from IP 192.168.1.63,IP,ORG,"Companies, agencies, institutions, etc."
+58,User logged in from IP 192.168.1.63,192.168.1.63,CARDINAL,Numerals that do not fall under another type
+60,Connection to www.suspicious-site-3.com on port 8080,8080,CARDINAL,Numerals that do not fall under another type
+61,Email sent from Jane Doe to John Doe about Project X and the London office.,Email,PERSON,"People, including fictional"
+61,Email sent from Jane Doe to John Doe about Project X and the London office.,Jane Doe,PERSON,"People, including fictional"
+61,Email sent from Jane Doe to John Doe about Project X and the London office.,John Doe,PERSON,"People, including fictional"
+61,Email sent from Jane Doe to John Doe about Project X and the London office.,Project X,ORG,"Companies, agencies, institutions, etc."
+61,Email sent from Jane Doe to John Doe about Project X and the London office.,London,GPE,"Countries, cities, states"
+62,Connection to www.suspicious-site-1.com on port 8080,8080,CARDINAL,Numerals that do not fall under another type
+63,User logged in from IP 192.168.1.22,IP,ORG,"Companies, agencies, institutions, etc."
+63,User logged in from IP 192.168.1.22,192.168.1.22,CARDINAL,Numerals that do not fall under another type
+65,User logged in from IP 192.168.1.197,IP 192.168.1.197,ORG,"Companies, agencies, institutions, etc."
+66,User logged in from IP 192.168.1.9,IP,ORG,"Companies, agencies, institutions, etc."
+66,User logged in from IP 192.168.1.9,192.168.1.9,CARDINAL,Numerals that do not fall under another type
+68,User logged in from IP 192.168.1.209,IP,ORG,"Companies, agencies, institutions, etc."
+69,Connection to www.suspicious-site-1.com on port 8080,8080,CARDINAL,Numerals that do not fall under another type
+70,Connection to www.suspicious-site-3.com on port 8080,8080,CARDINAL,Numerals that do not fall under another type
+72,Email sent from Jane Doe to John Doe about Project X and the London office.,Email,PERSON,"People, including fictional"
+72,Email sent from Jane Doe to John Doe about Project X and the London office.,Jane Doe,PERSON,"People, including fictional"
+72,Email sent from Jane Doe to John Doe about Project X and the London office.,John Doe,PERSON,"People, including fictional"
+72,Email sent from Jane Doe to John Doe about Project X and the London office.,Project X,ORG,"Companies, agencies, institutions, etc."
+72,Email sent from Jane Doe to John Doe about Project X and the London office.,London,GPE,"Countries, cities, states"
+74,Connection to www.suspicious-site-1.com on port 8080,8080,CARDINAL,Numerals that do not fall under another type
+76,User logged in from IP 192.168.1.126,IP,ORG,"Companies, agencies, institutions, etc."
+76,User logged in from IP 192.168.1.126,192.168.1.126,CARDINAL,Numerals that do not fall under another type
+77,Connection to www.suspicious-site-4.com on port 8080,8080,CARDINAL,Numerals that do not fall under another type
+78,User logged in from IP 192.168.1.79,IP,ORG,"Companies, agencies, institutions, etc."
+78,User logged in from IP 192.168.1.79,192.168.1.79,CARDINAL,Numerals that do not fall under another type
+79,Email sent from Jane Doe to John Doe about Project X and the London office.,Email,PERSON,"People, including fictional"
+79,Email sent from Jane Doe to John Doe about Project X and the London office.,Jane Doe,PERSON,"People, including fictional"
+79,Email sent from Jane Doe to John Doe about Project X and the London office.,John Doe,PERSON,"People, including fictional"
+79,Email sent from Jane Doe to John Doe about Project X and the London office.,Project X,ORG,"Companies, agencies, institutions, etc."
+79,Email sent from Jane Doe to John Doe about Project X and the London office.,London,GPE,"Countries, cities, states"
+80,Connection to www.suspicious-site-5.com on port 8080,8080,CARDINAL,Numerals that do not fall under another type
+81,Connection to www.suspicious-site-3.com on port 8080,8080,CARDINAL,Numerals that do not fall under another type
+82,User logged in from IP 192.168.1.49,IP,ORG,"Companies, agencies, institutions, etc."
+82,User logged in from IP 192.168.1.49,192.168.1.49,CARDINAL,Numerals that do not fall under another type
+83,Email sent from Jane Doe to John Doe about Project X and the London office.,Email,PERSON,"People, including fictional"
+83,Email sent from Jane Doe to John Doe about Project X and the London office.,Jane Doe,PERSON,"People, including fictional"
+83,Email sent from Jane Doe to John Doe about Project X and the London office.,John Doe,PERSON,"People, including fictional"
+83,Email sent from Jane Doe to John Doe about Project X and the London office.,Project X,ORG,"Companies, agencies, institutions, etc."
+83,Email sent from Jane Doe to John Doe about Project X and the London office.,London,GPE,"Countries, cities, states"
+84,User logged in from IP 192.168.1.90,IP,ORG,"Companies, agencies, institutions, etc."
+84,User logged in from IP 192.168.1.90,192.168.1.90,CARDINAL,Numerals that do not fall under another type
+85,User logged in from IP 192.168.1.141,IP,ORG,"Companies, agencies, institutions, etc."
+87,Connection to www.suspicious-site-5.com on port 8080,8080,CARDINAL,Numerals that do not fall under another type
+90,Connection to www.suspicious-site-1.com on port 8080,8080,CARDINAL,Numerals that do not fall under another type
+91,User logged in from IP 192.168.1.19,IP,ORG,"Companies, agencies, institutions, etc."
+91,User logged in from IP 192.168.1.19,192.168.1.19,CARDINAL,Numerals that do not fall under another type
+93,Email sent from Jane Doe to John Doe about Project X and the London office.,Email,PERSON,"People, including fictional"
+93,Email sent from Jane Doe to John Doe about Project X and the London office.,Jane Doe,PERSON,"People, including fictional"
+93,Email sent from Jane Doe to John Doe about Project X and the London office.,John Doe,PERSON,"People, including fictional"
+93,Email sent from Jane Doe to John Doe about Project X and the London office.,Project X,ORG,"Companies, agencies, institutions, etc."
+93,Email sent from Jane Doe to John Doe about Project X and the London office.,London,GPE,"Countries, cities, states"
+94,Email sent from Jane Doe to John Doe about Project X and the London office.,Email,PERSON,"People, including fictional"
+94,Email sent from Jane Doe to John Doe about Project X and the London office.,Jane Doe,PERSON,"People, including fictional"
+94,Email sent from Jane Doe to John Doe about Project X and the London office.,John Doe,PERSON,"People, including fictional"
+94,Email sent from Jane Doe to John Doe about Project X and the London office.,Project X,ORG,"Companies, agencies, institutions, etc."
+94,Email sent from Jane Doe to John Doe about Project X and the London office.,London,GPE,"Countries, cities, states"
+98,User logged in from IP 192.168.1.224,IP,ORG,"Companies, agencies, institutions, etc."
+98,User logged in from IP 192.168.1.224,192.168.1.224,CARDINAL,Numerals that do not fall under another type
+99,Connection to www.suspicious-site-3.com on port 8080,8080,CARDINAL,Numerals that do not fall under another type

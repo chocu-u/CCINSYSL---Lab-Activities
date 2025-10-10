@@ -1,4 +1,0 @@
-pandas>=1.5
-scikit-learn>=1.0
-matplotlib>=3.5
-spacy>=3.0

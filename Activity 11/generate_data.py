@@ -1,0 +1,82 @@
+"""
+generate_data.py
+
+Creates a simulated `rental_fraud_log.csv` with columns described in the project plan.
+"""
+from datetime import datetime, timedelta
+import csv
+import random
+
+OUT = "rental_fraud_log.csv"
+NUM_RECORDS = 500
+
+vehicle_models = [
+    "Toyota Corolla", "Honda Civic", "Ford Focus", "Chevrolet Malibu",
+    "Tesla Model 3", "Nissan Altima", "BMW 3 Series", "Audi A4"
+]
+first_names = ["John", "Jane", "Alex", "Chris", "Pat", "Taylor", "Sam", "Jordan"]
+last_names = ["Smith", "Johnson", "Williams", "Brown", "Jones", "Miller", "Davis"]
+
+def random_name():
+    # produce inconsistent casing sometimes
+    name = f"{random.choice(first_names)} {random.choice(last_names)}"
+    if random.random() < 0.2:
+        return name.upper()
+    if random.random() < 0.2:
+        return name.lower()
+    return name.title()
+
+def main():
+    start_date = datetime(2025, 1, 1)
+    rows = []
+    for i in range(1, NUM_RECORDS + 1):
+        rental_id = f"R{i:05d}"
+        customer_name = random_name()
+        rent_out = start_date + timedelta(hours=random.randint(0, 24*180), minutes=random.randint(0,59))
+        # expected duration between 1 and 72 hours
+        expected = round(random.uniform(1, 72), 1)
+
+        # simulate actual return: most return within expected*1.5, some extreme returns, some missing
+        r = random.random()
+        if r < 0.03:
+            # missing return -> fraudulent non-return
+            return_ts = ""
+            actual = ""
+        else:
+            # on-time or late
+            if r < 0.85:
+                actual_hours = expected * random.uniform(0.5, 1.5)
+            elif r < 0.98:
+                actual_hours = expected * random.uniform(1.5, 6)
+            else:
+                actual_hours = expected * random.uniform(6, 40)
+            return_ts = (rent_out + timedelta(hours=actual_hours, minutes=random.randint(0,59))).isoformat()
+            actual = round(actual_hours, 1)
+
+        vehicle = random.choice(vehicle_models)
+
+        rows.append({
+            "rental_id": rental_id,
+            "customer_name": customer_name,
+            "rent_out_timestamp": rent_out.isoformat(),
+            "return_timestamp": return_ts,
+            "rental_duration_hours": expected,
+            "actual_duration_hours": actual,
+            "vehicle_make_model": vehicle,
+        })
+
+    # write CSV
+    fieldnames = [
+        "rental_id", "customer_name", "rent_out_timestamp", "return_timestamp",
+        "rental_duration_hours", "actual_duration_hours", "vehicle_make_model"
+    ]
+    with open(OUT, "w", newline='', encoding='utf-8') as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        for r in rows:
+            writer.writerow(r)
+
+    print(f"Wrote {len(rows)} records to {OUT}")
+
+if __name__ == '__main__':
+    main()

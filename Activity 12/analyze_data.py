@@ -10,7 +10,6 @@ from sklearn.ensemble import IsolationForest
 from sklearn.preprocessing import StandardScaler
 import numpy as np
 
-# Input/output files
 INPUT_FILE = "../Activity 11/final_project_cleaned_data.csv"
 OUTPUT_ANOMALIES = "final_project_anomalies.csv"
 OUTPUT_CHART = "final_project_chart.png"
@@ -19,74 +18,58 @@ def main():
     print("Loading cleaned data...")
     df = pd.read_csv(INPUT_FILE)
     
-    # Display basic info
     print(f"Loaded {len(df)} records from {INPUT_FILE}")
     print(f"Columns: {list(df.columns)}")
     
-    # Prepare features for anomaly detection
-    # We'll use Duration_Difference and hour_of_day as specified in the plan
     features = ['Duration_Difference', 'hour_of_day']
     
-    # Filter rows with valid data
     df_valid = df[df[features].notna().all(axis=1)].copy()
     print(f"\nUsing {len(df_valid)} records with complete data for anomaly detection")
     
-    # Extract feature matrix
     X = df_valid[features].values
     
-    # Normalize features
     scaler = StandardScaler()
     X_scaled = scaler.fit_transform(X)
     
-    # Apply Isolation Forest
     print("\nApplying Isolation Forest anomaly detection...")
     iso_forest = IsolationForest(
-        contamination=0.1,  # expect ~10% anomalies
+        contamination=0.1,
         random_state=42,
         n_estimators=100
     )
     
-    # Predict: -1 for anomalies, 1 for normal
     predictions = iso_forest.fit_predict(X_scaled)
     anomaly_scores = iso_forest.score_samples(X_scaled)
     
-    # Add predictions to dataframe
     df_valid['anomaly_prediction'] = predictions
     df_valid['anomaly_score_ml'] = anomaly_scores
     df_valid['is_anomaly'] = df_valid['anomaly_prediction'] == -1
     
-    # Count anomalies
     num_anomalies = df_valid['is_anomaly'].sum()
     pct_anomalies = (num_anomalies / len(df_valid)) * 100
     print(f"Detected {num_anomalies} anomalies ({pct_anomalies:.1f}% of data)")
     
-    # Save anomalies to CSV
     anomalies_df = df_valid[df_valid['is_anomaly']].copy()
     anomalies_df = anomalies_df.sort_values('Duration_Difference', ascending=False)
     anomalies_df.to_csv(OUTPUT_ANOMALIES, index=False)
     print(f"\nSaved {len(anomalies_df)} anomalies to {OUTPUT_ANOMALIES}")
     
-    # Display top anomalies
     print("\nTop 5 anomalies by Duration_Difference:")
     print(anomalies_df[['rental_id', 'customer_name_clean', 'Duration_Difference', 
                         'hour_of_day', 'non_return']].head())
     
-    # Create visualization: Duration_Difference vs hour_of_day
     print("\nCreating visualization...")
     plt.figure(figsize=(12, 7))
     
-    # Plot normal points
     normal_data = df_valid[~df_valid['is_anomaly']]
     plt.scatter(normal_data['hour_of_day'], normal_data['Duration_Difference'], 
                 c='lightblue', alpha=0.5, s=30, label='Normal Rentals', edgecolors='none')
     
-    # Plot anomalous points
     anomaly_data = df_valid[df_valid['is_anomaly']]
     plt.scatter(anomaly_data['hour_of_day'], anomaly_data['Duration_Difference'], 
                 c='red', alpha=0.7, s=60, label='Anomalous Rentals', 
                 edgecolors='darkred', linewidths=1)
     
-    # Formatting
     plt.xlabel('Hour of Day (Rental Start Time)', fontsize=12, fontweight='bold')
     plt.ylabel('Duration Difference (Actual - Expected Hours)', fontsize=12, fontweight='bold')
     plt.title('Anomalous Rental Duration vs. Time of Day\nCar Rental Fraud Detection Analysis', 
@@ -95,10 +78,8 @@ def main():
     plt.grid(True, alpha=0.3, linestyle='--')
     plt.xticks(range(0, 25, 2))
     
-    # Add reference line at y=0
     plt.axhline(y=0, color='gray', linestyle='-', linewidth=0.8, alpha=0.5)
     
-    # Add text box with statistics
     stats_text = f"Total Records: {len(df_valid)}\n"
     stats_text += f"Anomalies Detected: {num_anomalies} ({pct_anomalies:.1f}%)\n"
     stats_text += f"Max Duration Difference: {df_valid['Duration_Difference'].max():.1f}h"
@@ -111,7 +92,6 @@ def main():
     plt.savefig(OUTPUT_CHART, dpi=300, bbox_inches='tight')
     print(f"Saved visualization to {OUTPUT_CHART}")
     
-    # Summary statistics
     print("\n" + "="*60)
     print("ANALYSIS SUMMARY")
     print("="*60)

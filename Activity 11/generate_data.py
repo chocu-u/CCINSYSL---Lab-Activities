@@ -1,18 +1,13 @@
-"""
-generate_data.py
-
-Creates a simulated `rental_fraud_log.csv` with columns described in the project plan.
-"""
 from datetime import datetime, timedelta
 import csv
 import random
 
-OUT = "rental_fraud_log.csv"
-NUM_RECORDS = 500
+OUT = "final_project_raw_data.csv"
+NUM_RECORDS = 150
 
 vehicle_models = [
-    "Toyota Corolla", "Honda Civic", "Ford Focus", "Chevrolet Malibu",
-    "Tesla Model 3", "Nissan Altima", "BMW 3 Series", "Audi A4"
+    "Toyota Corolla", "Honda Civic", "Mitsubishi Lancer", "Toyota Fortuner",
+    "BYD Seal", "Nissan Altima", "BMW M3", "Audi A4"
 ]
 first_names = ["John", "Jane", "Alex", "Chris", "Pat", "Taylor", "Sam", "Jordan"]
 last_names = ["Smith", "Johnson", "Williams", "Brown", "Jones", "Miller", "Davis"]

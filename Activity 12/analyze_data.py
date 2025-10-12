@@ -1,16 +1,10 @@
-"""
-analyze_data.py
-
-Activity 12: Final Project Analysis
-Applies Isolation Forest anomaly detection to the cleaned rental data and creates visualization.
-"""
 import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.ensemble import IsolationForest
 from sklearn.preprocessing import StandardScaler
 import numpy as np
 
-INPUT_FILE = "../Activity 11/final_project_cleaned_data.csv"
+INPUT_FILE = "final_project_cleaned_data.csv"
 OUTPUT_ANOMALIES = "final_project_anomalies.csv"
 OUTPUT_CHART = "final_project_chart.png"
 

@@ -1,13 +1,7 @@
-"""
-preprocess_data.py
-
-Reads `rental_fraud_log.csv`, performs cleaning and feature engineering described in the project plan,
-and writes `final_project_cleaned_data.csv` and `final_project_anomalies.csv`.
-"""
 import pandas as pd
 from datetime import datetime
 
-IN = "rental_fraud_log.csv"
+IN = "final_project_raw_data.csv"
 OUT = "final_project_cleaned_data.csv"
 ANOM = "final_project_anomalies.csv"
 
